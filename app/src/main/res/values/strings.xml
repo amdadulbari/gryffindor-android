@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Gryffindor</string>
+    <string name="app_name">Gryffindor LMS</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
 </resources>
