@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.gryffindor.lms.gryffindor.R;
+import com.gryffindor.lms.gryffindor.views.activities.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 

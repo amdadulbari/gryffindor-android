@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout android:orientation="vertical"
     android:id="@+id/lin_lay1"
     android:background="@drawable/wood1"
@@ -122,6 +123,13 @@
                 android:text="@string/forgot_my_pwd" />
         </LinearLayout>
     </ScrollView>
+=======
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.LoginActivity">
+>>>>>>> 1b74d450cb674fd05c5979a49abf1fc0e665a356
 
     <LinearLayout
         android:gravity="center"
@@ -131,6 +139,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+<<<<<<< HEAD
         <TextView
             android:textSize="@dimen/txt_14sp"
             android:textColor="@color/white"
@@ -148,5 +157,70 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register_now" />
+=======
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <EditText
+            android:id="@+id/etemail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress|text"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/txtColor" />
+
+        <TextView
+            android:id="@+id/tvforgotpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/forgot_pass" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/create_account" />
+
+            <TextView
+                android:id="@+id/tvRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/click_here" />
+
+        </LinearLayout>
+
+>>>>>>> 1b74d450cb674fd05c5979a49abf1fc0e665a356
     </LinearLayout>
 </LinearLayout>
