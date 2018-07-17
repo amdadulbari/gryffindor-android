@@ -18,7 +18,16 @@
             android:src="@mipmap/ic_launcher" />
 
         <EditText
-            android:id="@+id/etemail"
+            android:id="@+id/etUserReg"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress|text"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etemailReg"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -27,7 +36,7 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/etpassword"
+            android:id="@+id/etpasswordReg"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
 
@@ -36,8 +45,9 @@
             android:inputType="textPassword"
             android:padding="10dp"
             android:textSize="15sp" />
+
         <EditText
-            android:id="@+id/etdob"
+            android:id="@+id/etdobReg"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="@string/dob"
@@ -45,10 +55,10 @@
             android:textSize="15sp" />
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -56,14 +66,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:text="@string/gender" />
+
             <Spinner
                 android:id="@+id/spgender"
                 android:layout_width="wrap_content"
-                android:entries="@array/gender"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/gender"></Spinner>
         </LinearLayout>
-
-
 
 
         <LinearLayout
@@ -82,13 +91,13 @@
             <Spinner
                 android:id="@+id/sptype"
                 android:layout_width="wrap_content"
-                android:entries="@array/type"
-                android:layout_height="wrap_content"></Spinner>
+                android:layout_height="wrap_content"
+                android:entries="@array/type"></Spinner>
         </LinearLayout>
 
 
         <Button
-            android:id="@+id/btnlogin"
+            android:id="@+id/btnReg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"

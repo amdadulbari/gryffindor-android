@@ -3,7 +3,6 @@ package com.gryffindor.lms.gryffindor.views.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gryffindor.lms.gryffindor.R;
-import com.gryffindor.lms.gryffindor.controllers.LoginController;
+import com.gryffindor.lms.gryffindor.controllers.UserController;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,8 +43,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         password = etPassword.getText().toString();
         switch (v.getId()) {
             case R.id.btnlogin:
-                LoginController loginController = new LoginController();
-                boolean success = loginController.doLogin(email, password);
+                UserController userController = new UserController();
+                boolean success = userController.doLogin(email, password);
                 if (success) {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
                 } else {
@@ -53,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
                 break;
             case R.id.tvRegistration:
-                Intent intent = new Intent(this,RegistrationActivity.class);
+                Intent intent = new Intent(this, RegistrationActivity.class);
                 startActivity(intent);
                 break;
         }
