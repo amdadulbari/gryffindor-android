@@ -1,163 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<LinearLayout android:orientation="vertical"
-    android:id="@+id/lin_lay1"
-    android:background="@drawable/wood1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dip"
-        android:layout_weight="1.0">
-
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/pad_15dp"
-            android:paddingTop="@dimen/pad_20dp"
-            android:paddingRight="@dimen/pad_15dp"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:src="@drawable/book" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/pad_15dp"
-                >
-
-                <Button
-                    android:id="@+id/btnTw"
-                    android:background="@drawable/btn_tw"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    style="@style/btn"
-                    android:layout_weight="1"/>
-
-                <Button
-                    android:id="@+id/btnFb"
-                    android:background="@drawable/btn_fb"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/pad_10dp"
-                    style="@style/btn" />
-            </LinearLayout>
-
-            <TextView
-                android:textSize="@dimen/txt_16sp"
-                android:textColor="@color/white"
-                android:id="@+id/textView1"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/pad_10dp"
-                android:layout_marginBottom="@dimen/pad_5dp"
-                android:text="@string/signin" />
-
-            <EditText
-                android:id="@+id/etemail"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/username"
-                android:drawableRight="@drawable/ic_username"
-                style="@style/editext_normal">
-
-                <requestFocus />
-            </EditText>
-
-            <EditText
-                android:id="@+id/etpassword"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/pad_5dp"
-                android:hint="@string/password"
-                android:drawableRight="@drawable/ic_pwd"
-                android:inputType="textPassword"
-                style="@style/editext_normal" />
-
-            <LinearLayout
-                android:gravity="bottom"
-                android:id="@+id/a"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/pad_10dp">
-
-                <CheckBox
-                    android:textSize="@dimen/txt_14sp"
-                    android:textColor="@color/white"
-                    android:id="@+id/checkBox1"
-                    android:layout_width="0.0dip"
-                    android:layout_height="wrap_content"
-                    android:text="@string/keep_me_signin"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_weight=".7"
-                    android:backgroundTint="@color/indigo"
-                    android:id="@+id/btnlogin"
-                    android:text="Sign IN"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt_18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/btn" />
-            </LinearLayout>
-
-            <Button
-                android:textSize="@dimen/txt_14sp"
-                android:textColor="@color/white"
-                android:gravity="right"
-                android:id="@+id/btnForgot"
-                android:background="@color/transparent"
-                android:padding="@dimen/pad_5dp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/forgot_my_pwd" />
-        </LinearLayout>
-    </ScrollView>
-=======
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.activities.LoginActivity">
->>>>>>> 1b74d450cb674fd05c5979a49abf1fc0e665a356
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:id="@+id/btnReg"
-        android:background="@drawable/reg_bg"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-<<<<<<< HEAD
-        <TextView
-            android:textSize="@dimen/txt_14sp"
-            android:textColor="@color/white"
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/pad_3dp"
-            android:text="@string/no_account" />
-
-        <TextView
-            android:textSize="@dimen/txt_14sp"
-            android:textStyle="bold"
-            android:textColor="@color/main_color_gray"
-            android:id="@id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register_now" />
-=======
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -221,6 +74,6 @@
 
         </LinearLayout>
 
->>>>>>> 1b74d450cb674fd05c5979a49abf1fc0e665a356
     </LinearLayout>
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
