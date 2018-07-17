@@ -6,5 +6,30 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="forgot_pass">Forgot your password?</string>
+    <string name="create_account">Don\'t have an account?</string>
+    <string name="click_here">Click here to create</string>
+
+    <!-- Strings related to Registration -->
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="type">Type</string>
+    <string name="dob">Date of Birth</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="login_click">Click here to login</string>
+
+
+
+    <!--- Spinners -->
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
 
 </resources>
