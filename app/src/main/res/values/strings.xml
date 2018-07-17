@@ -18,7 +18,8 @@
     <string name="sign_up">Sign Up</string>
     <string name="have_account">Already have an account?</string>
     <string name="login_click">Click here to login</string>
-
+    <string name="verification_code">Your verification code</string>
+    <string name="submit">Submit</string>
 
 
     <!--- Spinners -->
@@ -31,5 +32,12 @@
         <item>Student</item>
         <item>Teacher</item>
     </string-array>
+    <string name="title_activity_homepage">HomepageActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

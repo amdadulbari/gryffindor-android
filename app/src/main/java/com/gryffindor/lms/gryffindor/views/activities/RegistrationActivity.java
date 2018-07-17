@@ -70,7 +70,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 success = userController.doRegistration(username, email, password, dob, type, gender);
                 if (success == true) {
                     Toast.makeText(getApplicationContext(), "Account Created Successfully", Toast.LENGTH_SHORT).show();
-                    Intent loginIntent = new Intent(this, LoginActivity.class);
+                    Intent loginIntent = new Intent(this, AccountVerifyActivity.class);
                     startActivity(loginIntent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Failed to create account", Toast.LENGTH_SHORT).show();

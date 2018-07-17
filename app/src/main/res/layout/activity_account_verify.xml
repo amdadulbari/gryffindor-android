@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".views.activities.AccountVerifyActivity">
+
+    <EditText
+        android:id="@+id/etVerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:hint="@string/verification_code"/>
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/txtColor"
+        android:background="@drawable/custom_button"
+        android:text="@string/submit"/>
+
+</LinearLayout>
