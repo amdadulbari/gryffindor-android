@@ -3,5 +3,21 @@
     <color name="colorPrimary">#590b86</color>
     <color name="colorPrimaryDark">#e3000000</color>
     <color name="colorAccent">#FF4081</color>
+<<<<<<< HEAD
+
+    <color name="white_smoke">#fff7f7f7</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_color_gray_dk">#ff44352d</color>
+    <color name="main_color_gray_dk1">#ff5b5252</color>
+    <color name="main_color_gray">#ffd4a270</color>
+    <color name="main_color_gray_lt">#ffa1a1a1</color>
+    <color name="gray_light">#ffdcd8d8</color>
+    <color name="main_gray_dk">#ff8a7b7b</color>
+    <color name="main_gray_lt">#ffb9abab</color>
+    <color name="indigo">#4B0082</color>
+=======
     <color name="txtColor">#ffffff</color>
+>>>>>>> 1b74d450cb674fd05c5979a49abf1fc0e665a356
 </resources>
