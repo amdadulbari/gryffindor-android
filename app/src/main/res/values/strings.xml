@@ -4,7 +4,19 @@
 
     <!-- Strings related to login -->
     <string name="email">Email</string>
-    <string name="password">Password</string>
+
     <string name="login">Login</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="forgot_my_pwd">Forgotten your password?</string>
+    <string name="search">Search</string>
+    <string name="signin">Sign In</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="keep_me_signin">Keep me signed in</string>
+    <string name="no_account">No account?</string>
+    <string name="register_now">Register Now</string>
+    <string name="signout">Sign Out</string>
 
 </resources>
