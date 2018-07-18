@@ -64,7 +64,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.btnReg:
+            case R.id.tvRegis:
                 boolean success;
                 UserController userController = new UserController();
                 success = userController.doRegistration(username, email, password, dob, type, gender);
