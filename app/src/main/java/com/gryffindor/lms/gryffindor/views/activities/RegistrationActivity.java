@@ -22,7 +22,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
     private EditText etUsername;
     private EditText etPassword;
     private EditText etDob;
-    private Button btnRegistration;
+    private TextView tvRegis;
 
     private String email;
     private String password;
@@ -45,10 +45,10 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         spType = findViewById(R.id.sptype);
 
         tvLogin = findViewById(R.id.tvLogin);
-        btnRegistration = findViewById(R.id.btnReg);
+        tvRegis = findViewById(R.id.tvRegis);
 
         tvLogin.setOnClickListener(this);
-        btnRegistration.setOnClickListener(this);
+        tvRegis.setOnClickListener(this);
     }
 
     @Override
