@@ -1,8 +1,13 @@
 package com.gryffindor.lms.gryffindor.views.activities;
 
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,14 +19,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.gryffindor.lms.gryffindor.R;
+import com.gryffindor.lms.gryffindor.constants.SettingsConstant;
+import com.gryffindor.lms.gryffindor.views.fragments.ClassListFragment;
+import com.gryffindor.lms.gryffindor.views.fragments.CreateClassFragment;
+import com.gryffindor.lms.gryffindor.views.fragments.JoinClassFragment;
 
-public class HomepageActivity extends AppCompatActivity
+public class HomePageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.activity_home_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,15 +59,14 @@ public class HomepageActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            //super.onBackPressed();
-            finish();
+            super.onBackPressed();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.homepage, menu);
+        getMenuInflater().inflate(R.menu.home_page, menu);
         return true;
     }
 
@@ -81,26 +89,31 @@ public class HomepageActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment fragment = null;
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            fragment = new ClassListFragment();
         } else if (id == R.id.nav_gallery) {
-
+            fragment = new JoinClassFragment();
         } else if (id == R.id.nav_slideshow) {
-
+            fragment = new CreateClassFragment();
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            SharedPreferences pref = getApplicationContext().getSharedPreferences(SettingsConstant.userSharedPref, 0);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.clear();
+            editor.commit();
+        }
+        if(fragment!=null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main,fragment).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }

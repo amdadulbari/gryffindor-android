@@ -23,8 +23,8 @@
         <activity android:name=".views.activities.RegistrationActivity" />
         <activity android:name=".views.activities.AccountVerifyActivity" />
         <activity
-            android:name=".views.activities.HomepageActivity"
-            android:label="@string/title_activity_homepage"
+            android:name=".views.activities.HomePageActivity"
+            android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

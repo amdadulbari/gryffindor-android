@@ -58,7 +58,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         password = etPassword.getText().toString();
         dob = etDob.getText().toString();
         type = spType.getSelectedItem().toString();
-        gender = spType.getSelectedItem().toString();
+        gender = spGender.getSelectedItem().toString();
         switch (v.getId()) {
             case R.id.tvLogin:
                 Intent intent = new Intent(this, LoginActivity.class);
@@ -70,7 +70,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 success = userController.doRegistration(username, email, password, dob, type, gender);
                 if (success == true) {
                     Toast.makeText(getApplicationContext(), "Account Created Successfully", Toast.LENGTH_SHORT).show();
-                    Intent loginIntent = new Intent(this, AccountVerifyActivity.class);
+                    Intent loginIntent = new Intent(this, LoginActivity.class);
                     startActivity(loginIntent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Failed to create account", Toast.LENGTH_SHORT).show();

@@ -7,6 +7,7 @@ import com.eclipsesource.json.JsonObject;
 import com.gryffindor.lms.gryffindor.constants.SettingsConstant;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -19,9 +20,13 @@ public class HttpPoster extends AsyncTask<String,Void,String>{
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
-    OkHttpClient client = new OkHttpClient();
 
     public String post(String url, String json) throws IOException {
+        OkHttpClient client = new OkHttpClient.Builder()
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
         Log.d("JSON",json);
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()

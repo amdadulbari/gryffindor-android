@@ -5,12 +5,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bright"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_homepage"
+        layout="@layout/app_bar_home_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -20,7 +19,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_homepage"
-        app:menu="@menu/activity_homepage_drawer" />
+        app:headerLayout="@layout/nav_header_home_page"
+        app:menu="@menu/activity_home_page_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

@@ -18,11 +18,13 @@
         <item name="android:paddingBottom">@dimen/pad_5dp</item>
         <item name="android:clickable">true</item>
     </style>
-    <style name="btn" >
+
+    <style name="btn">
         <item name="android:minWidth">1.0dip</item>
         <item name="android:minHeight">1.0dip</item>
     </style>
-    <style name="editext_normal" >
+
+    <style name="editext_normal">
         <item name="android:textSize">@dimen/txt_16sp</item>
         <item name="android:ems">10</item>
         <item name="android:drawablePadding">@dimen/pad_10dp</item>
@@ -30,7 +32,7 @@
         <item name="android:textColorHint">@color/white</item>
     </style>
 
-    <style name="spinner_reg" >
+    <style name="spinner_reg">
         <item name="android:textSize">@dimen/txt_16sp</item>
         <item name="android:ems">10</item>
         <item name="android:drawablePadding">@dimen/pad_10dp</item>

@@ -7,6 +7,10 @@ public class SettingsConstant {
     //public static String baseURL = "http://192.168.0.103:8080/";
     public static String loginEndPoint = "/api/user/login";
     public static String signupEndPoint = "/api/user/create";
+    public static String verificationEndPoint = "/api/user/validate";
+    public static String createClassEndPoint = "/api/classroom/create";
+    public static String joinClassEndPoint = "/api/classroom/join";
+
 
     public static String userSharedPref = "userSharedPref";
     public static Context appContext;

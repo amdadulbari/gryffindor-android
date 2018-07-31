@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gryffindor.lms.gryffindor.R;
+import com.gryffindor.lms.gryffindor.constants.SettingsConstant;
 import com.gryffindor.lms.gryffindor.controllers.UserController;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -48,10 +50,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 boolean success = userController.doLogin(email, password);
                 if (success) {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
-                    SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                    SharedPreferences pref = getApplicationContext().getSharedPreferences(SettingsConstant.userSharedPref, 0);
                     String status = pref.getString("status","");
-                    if(status=="verified"){
-                        Intent intent = new Intent(this,HomepageActivity.class);
+                    Log.d("Status = ",status) ;
+                    if(status.equals("active")){
+                        Intent intent = new Intent(this,HomePageActivity.class);
                         startActivity(intent);
                     }else{
                         Intent intent = new Intent(this,AccountVerifyActivity.class);

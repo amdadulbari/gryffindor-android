@@ -6,20 +6,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/avatar"
-            android:title="Profile" />
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Classes" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/classs"
-            android:title="Enrolled classes" />
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Join" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/classroom"
-            android:title="Browse Classes" />
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Create Class" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
+            android:title="Other" />
     </group>
 
     <item android:title="Communicate">
@@ -27,11 +27,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Settings" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Contact Us" />
+                android:title="Log Out" />
         </menu>
     </item>
 

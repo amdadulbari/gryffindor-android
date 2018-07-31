@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.gryffindor.lms.gryffindor.R;
 import com.gryffindor.lms.gryffindor.controllers.UserController;
@@ -36,7 +37,8 @@ public class AccountVerifyActivity extends AppCompatActivity implements View.OnC
                 UserController userController = new UserController();
                 success = userController.verifyUser(verificationCode);
                 if (success) {
-                    Intent intent = new Intent(this, HomepageActivity.class);
+                    Toast.makeText(getApplicationContext(),"User verified successfully",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, LoginActivity.class);
                     startActivity(intent);
                 }
         }
