@@ -3,6 +3,7 @@ package com.gryffindor.lms.gryffindor.controllers;
 import android.content.SharedPreferences;
 
 import com.eclipsesource.json.Json;
+import com.eclipsesource.json.JsonArray;
 import com.eclipsesource.json.JsonObject;
 import com.gryffindor.lms.gryffindor.constants.SettingsConstant;
 import com.gryffindor.lms.gryffindor.networks.HttpPoster;
@@ -19,30 +20,37 @@ public class UserController {
         requestObject.add("password", password);
         try {
             String response = httpPoster.execute(SettingsConstant.baseURL + SettingsConstant.loginEndPoint, requestObject.toString()).get();
+
             JsonObject responseObject = Json.parse(response).asObject();
+            JsonObject userObject = responseObject.get("user").asObject();
+            JsonArray classList = responseObject.get("class").asArray();
+
             success = responseObject.getBoolean("success", false);
-            name = responseObject.getString("username","");
-            email = responseObject.getString("email","");
-            dob = responseObject.getString("dob","");
-            gender = responseObject.getString("gender","");
-            status = responseObject.getString("status","");
-            type = responseObject.getString("type","");
+            name = userObject.getString("username","");
+            email = userObject.getString("email","");
+            dob = userObject.getString("dob","");
+            gender = userObject.getString("gender","");
+            status = userObject.getString("status","");
+            type = userObject.getString("type","");
 
             SharedPreferences pref = SettingsConstant.appContext.getSharedPreferences(SettingsConstant.userSharedPref, 0); // 0 - for private mode
             SharedPreferences.Editor editor = pref.edit();
             editor.putString("username",username);
             editor.putString("email",email);
             editor.putString("dob",dob);
+            editor.putString("name",name);
             editor.putString("gender",gender);
             editor.putString("status",status);
             editor.putString("type",type);
+            editor.putString("classes",classList.toString());
             editor.commit();
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
-        //TODO store info in shared pref.
+
+        System.out.println("SUCCESS = "+success);
         return success;
     }
 
