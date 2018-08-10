@@ -2,18 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@drawable/bright"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <EditText
+        style="@style/editext_normal"
         android:id="@+id/etJoinCode"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/join_code"/>
 
     <Button
-        android:id="@+id/btnJoin"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:textColor="@color/txtColor"
+        android:background="@drawable/custom_button"
+        android:layout_gravity="center"
+
+        android:id="@+id/btnJoin"
+
         android:text="Join"
         />
 
